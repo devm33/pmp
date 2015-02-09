@@ -1,0 +1,9 @@
+{
+  "name": "pmp",
+  "version": "0.0.1",
+  "description": "project management portal",
+  "devDependencies": {
+    "gulp": "*"
+  },
+  "author": "Mehta, Devraj"
+}
