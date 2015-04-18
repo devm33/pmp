@@ -3,7 +3,18 @@
   "version": "0.0.1",
   "description": "project management portal",
   "devDependencies": {
-    "gulp": "*"
+    "browser-sync": "^2.6.4",
+    "gulp": "^3.8.11",
+    "gulp-angular-templatecache": "^1.6.0",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-inject": "^1.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-watch": "^4.2.4",
+    "jshint": "^2.7.0",
+    "lazypipe": "^0.2.3",
+    "lodash": "^3.7.0",
+    "main-bower-files": "^2.6.2",
+    "merge-stream": "^0.1.7"
   },
   "author": "Mehta, Devraj"
 }
