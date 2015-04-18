@@ -30,3 +30,5 @@ gulp build
 gulp watch
 gulp serve
 ```
+
+See `gulpfile.js` for more in depth detail on the build tasks.
