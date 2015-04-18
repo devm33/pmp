@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var browserSync = require('broswer-sync');
 var gulp = require('gulp');
 var merge = require('merge-stream');
 var watch = require('gulp-watch');
@@ -11,8 +12,7 @@ var pipes = _.mapValues(config.tasks, function(config, name) {
 });
 
 gulp.task('serve', ['build', 'watch'], function() {
-    // TODO serve index.html (and local folder)
-    // use browersync
+    browserSync({server: {baseDir: './'}});
 });
 
 gulp.task('watch', ['build'], function() {
@@ -20,9 +20,8 @@ gulp.task('watch', ['build'], function() {
         watch(config.glob, function() {
             return merge(_.map(config.tasks, function(task) {
                 return pipes[task]();
-            })).pipe(function() {
-                // TODO call livereload
-            });
+            }))
+            .pipe(browserSync.reload);
         });
     });
 });
