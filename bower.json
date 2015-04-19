@@ -7,8 +7,15 @@
   "description": "project management portal",
   "private": true,
   "dependencies": {
-    "angular": "~1.3.1",
+    "angular": "~1.3.12",
     "lodash": "~3.5.0",
-    "ui-router": "*"
+    "ui-router": "~0.2.13",
+    "angular-bootstrap": "~0.12.1",
+    "bootstrap-sass": "~3.3.3"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "ignore": true
+    }
   }
 }

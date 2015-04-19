@@ -15,6 +15,10 @@ module.exports = function(pipes) {
                     'Watch triggered for', chalk.magenta(watchcfg.glob),
                     'running', chalk.cyan(watchcfg.tasks.toString())
                 );
+                if(!watchcfg.tasks || !watchcfg.tasks.length) {
+                    browserSync.reload();
+                    return;
+                }
                 merge.apply(null, _.map(watchcfg.tasks, function(task) {
                     return pipes[task]();
                 }))

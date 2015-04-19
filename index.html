@@ -6,16 +6,24 @@
         <!-- endinject -->
         <link rel="stylesheet" href="dist/main.css">
     </head>
-    <body>
+    <body ng-app="pmp">
+        <div class="container-fluid">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">Project Management Portal</a>
+                    </div>
+                </div>
+            </nav>
 
-        <h1>Project Management Portal</h1>
-
-        <h2>TODO</h2>
+            <ui-view></ui-view>
+        </div>
 
         <!-- bower:js -->
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/lodash/lodash.js"></script>
         <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <!-- endinject -->
 
         <script src="dist/app.js"></script>

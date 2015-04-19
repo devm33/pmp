@@ -1,12 +1,18 @@
 angular.module('pmp', [
+    'pmp/default',
     'templates',
+    'ui.bootstrap',
+    'ui.router',
 ])
 
-.directive('test', function() {
-    return {
-        templateUrl: 'test.html'
-    };
-});
+.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
 
-console.log('TODO');
-console.log('test2');
+    $stateProvider
+
+    .state('default', {
+        url: '/',
+        templateUrl: 'default/default.html',
+        controller: 'DefaultCtrl',
+    });
+});

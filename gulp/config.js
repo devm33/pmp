@@ -32,6 +32,10 @@ module.exports = {
             glob: 'bower.json',
             tasks: ['inject'],
         },
+        index: {
+            glob: 'index.html',
+            tasks: [],
+        },
         html: {
             glob: globs.html,
             tasks: ['templates']
