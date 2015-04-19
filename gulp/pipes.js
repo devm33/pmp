@@ -7,7 +7,7 @@ var config = require('./config');
 
 module.exports = function(gulp) {
     return _.mapValues(config.tasks, function(config, name) {
-        var pipeFn = require('./' + name)(gulp);
+        var pipeFn = require('./tasks/' + name)(gulp);
         return function() {
             var start = process.hrtime();
             gutil.log('Starting', '\'' + chalk.cyan(name) + '\'...');

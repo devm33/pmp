@@ -1,7 +1,7 @@
 var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
 
-var config = require('./config');
+var config = require('../config');
 
 module.exports = function(gulp) {
     return function() {

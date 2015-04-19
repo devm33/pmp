@@ -1,6 +1,6 @@
 var templateCache = require('gulp-angular-templatecache');
 
-var config = require('./config');
+var config = require('../config');
 
 module.exports = function(gulp) {
     return function() {

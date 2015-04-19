@@ -1,7 +1,7 @@
 var ngAnnotate = require('gulp-ng-annotate');
 var concat = require('gulp-concat');
 
-var config = require('./config');
+var config = require('../config');
 
 module.exports = function(gulp) {
     return function() {

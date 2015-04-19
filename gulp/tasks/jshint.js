@@ -1,7 +1,7 @@
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 
-var config = require('./config');
+var config = require('../config');
 
 module.exports = function(gulp) {
     return function() {

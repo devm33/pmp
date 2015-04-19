@@ -8,8 +8,6 @@ var globs = _.reduce(['js', 'html', 'scss'], function(ret, ext) {
     return ret;
 }, {});
 
-globs.destjs = dest + '**/*.js';
-
 module.exports = {
     src: src,
     dest: dest,
@@ -23,17 +21,12 @@ module.exports = {
         sass: globs.scss,
         inject: {
             html: 'index.html',
-            js: globs.destjs,
         }
     },
     watch: {
         js: {
             glob: globs.js,
             tasks: ['jshint', 'js'],
-        },
-        distjs: {
-            glob: globs.destjs,
-            tasks: ['inject'],
         },
         bower: {
             glob: 'bower.json',
