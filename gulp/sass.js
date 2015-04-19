@@ -7,6 +7,6 @@ module.exports = function(gulp) {
     return gulp.src(config.tasks.sass)
     .pipe(require('./plumber')())
     .pipe(sass())
-    .pipe(autoprefixer());
+    .pipe(autoprefixer())
     .pipe(gulp.dest(config.dest));
 };

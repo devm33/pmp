@@ -8,5 +8,5 @@ module.exports = function(gulp) {
     .pipe(require('./plumber')())
     .pipe(inject(gulp.src(mainBowerFiles(), {read: false}), {name: 'bower'}))
     .pipe(inject(gulp.src(config.tasks.inject.js, {read: false})))
-    .pipe(gulp.dest(config.tasks.inject.html));
+    .pipe(gulp.dest('.'));
 };

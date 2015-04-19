@@ -1,5 +1,6 @@
 var _ = require('lodash');
-var browserSync = require('broswer-sync');
+var browserSync = require('browser-sync');
+var del = require('del');
 var gulp = require('gulp');
 var merge = require('merge-stream');
 var watch = require('gulp-watch');
@@ -26,13 +27,14 @@ gulp.task('watch', ['build'], function() {
     });
 });
 
-var clean = require('./gulp/clean')(dist);
-gulp.task('clean', clean);
+gulp.task('clean', function(cb) { 
+    del(config.dest, cb);
+});
 
 gulp.task('build', ['clean'], function() {
     // TODO could we pipe jshint here so it goes first?
     return merge(
-        pipes.jshint(), pipes.sass(), pipes.inject(), pipes.templates()
+        pipes.jshint, pipes.sass, pipes.inject, pipes.templates
     );
 });
 

@@ -4,7 +4,7 @@ var src = 'src/';
 var globs = _.reduce(['js', 'html', 'scss'], function(ret, ext) {
     ret[ext] = src + '**/*.' + ext;
     return ret;
-});
+}, {});
 
 module.exports = {
     src: src,
@@ -30,7 +30,7 @@ module.exports = {
         html: {
             glob: globs.html,
             tasks: ['templates']
-        }
+        },
         sass: {
             glob: globs.scss,
             tasks: ['sass'],
