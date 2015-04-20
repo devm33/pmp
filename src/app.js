@@ -1,5 +1,5 @@
 angular.module('pmp', [
-    'pmp/default',
+    'pmp/project',
     'templates',
     'ui.bootstrap',
     'ui.router',
@@ -10,9 +10,9 @@ angular.module('pmp', [
 
     $stateProvider
 
-    .state('default', {
+    .state('project', {
         url: '/',
-        templateUrl: 'default/default.html',
-        controller: 'DefaultCtrl',
+        templateUrl: 'project/project.html',
+        controller: 'ProjectCtrl',
     });
 });

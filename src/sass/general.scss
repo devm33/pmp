@@ -1,0 +1,3 @@
+/* Fix from http://angular-ui.github.io/bootstrap for bootstrap angular
+ * compatibility */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
