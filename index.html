@@ -3,19 +3,15 @@
     <head>
         <title>Project Management Portal</title>
         <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/pikaday/css/pikaday.css">
+        <link rel="stylesheet" href="bower_components/handsontable/dist/handsontable.full.css">
         <!-- endinject -->
         <link rel="stylesheet" href="dist/main.css">
     </head>
     <body ng-app="pmp">
-        <div class="container-fluid">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand">Project Management Portal</a>
-                    </div>
-                </div>
-            </nav>
+        <pmp-nav></pmp-nav>
 
+        <div class="container">
             <ui-view></ui-view>
         </div>
 
@@ -24,6 +20,12 @@
         <script src="bower_components/lodash/lodash.js"></script>
         <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/Case/dist/Case.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
+        <script src="bower_components/pikaday/pikaday.js"></script>
+        <script src="bower_components/handsontable/dist/handsontable.full.js"></script>
+        <script src="bower_components/nghandsontable/dist/ngHandsontable.js"></script>
         <!-- endinject -->
 
         <script src="dist/app.js"></script>

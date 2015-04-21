@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Project Management Portal</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li ng-repeat="state in ctrl.states" 
+                ng-class="{active: state === ctrl.$state.current}">
+                <a ng-href="#{{state.url}}">{{state.title}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>
