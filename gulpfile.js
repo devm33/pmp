@@ -1,6 +1,6 @@
 var browserSync = require('browser-sync');
 var gulp = require('gulp');
-var merge = require('merge-stream');
+var merge = require('event-stream').merge;
 var del = require('del');
 var series = require('stream-series');
 

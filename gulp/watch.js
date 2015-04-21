@@ -2,7 +2,7 @@ var _ = require('lodash');
 var browserSync = require('browser-sync');
 var chalk = require('chalk');
 var gutil = require('gulp-util');
-var merge = require('merge-stream');
+var merge = require('event-stream').merge;
 var watch = require('gulp-watch');
 
 var config = require('./config');
@@ -17,12 +17,18 @@ module.exports = function(pipes) {
                 );
                 if(!watchcfg.tasks || !watchcfg.tasks.length) {
                     browserSync.reload();
-                    return;
+                } else {
+                    var all = merge(_.map(watchcfg.tasks, function(task) {
+                        return pipes[task]();
+                    }));
+                    if(watchcfg.stream) {
+                        all.pipe(browserSync.reload({stream: true}));
+                    } else {
+                        all.on('end', function() {
+                            browserSync.reload();
+                        });
+                    }
                 }
-                merge.apply(null, _.map(watchcfg.tasks, function(task) {
-                    return pipes[task]();
-                }))
-                .pipe(browserSync.reload({stream: true}));
             });
         });
     };

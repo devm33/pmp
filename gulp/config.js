@@ -43,6 +43,7 @@ module.exports = {
         sass: {
             glob: globs.scss,
             tasks: ['sass'],
+            stream: true,
         },
     },
 };
