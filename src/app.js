@@ -11,8 +11,7 @@ angular.module('pmp', [
     {
         name: 'project',
         url: '/',
-        templateUrl: 'project/project.html',
-        controller: 'ProjectCtrl',
+        template: '<project></project>',
     },
     {
         name: 'rates',
