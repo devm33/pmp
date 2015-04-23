@@ -1,1 +1,12 @@
-<hot-table datarows="ctrl.rates" colheaders="true"></hot-table>
+<hot-table datarows="ctrl.rates" colHeaders="true"
+    settings="{rowHeaders: false, contextMenu: true}">
+
+    <hot-column data="name" title="'Name'"></hot-column>
+    <hot-column ng-repeat="month in ctrl.months" data="{{month.data}}"
+        title="month.title">
+    </hot-column>
+</hot-table>
+
+
+<div>rates: {{ ctrl.rates | json }}</div>
+<div>columns: {{ ctrl.months | json }}</div>
